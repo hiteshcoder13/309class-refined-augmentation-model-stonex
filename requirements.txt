@@ -1,0 +1,13 @@
+streamlit==1.45.1
+
+torch==2.7.1
+torchvision==0.22.1
+
+timm==1.0.15
+
+opencv-python-headless==4.11.0.86
+
+albumentations==2.0.8
+
+numpy==2.2.6
+pillow==11.2.1
