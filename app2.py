@@ -84,10 +84,7 @@ class StoneEmbedder(nn.Module):
 @st.cache_resource
 def load_model():
 
-    splits_path = Path(
-        "/home/Unthinkable/Downloads/stonex-preprocessing"
-        "/309refinedaugmodel/splits (5).pkl"
-    )
+    splits_path = Path("309refinedaugmodel/splits (5).pkl")
     with open(splits_path, "rb") as f:
         splits = pickle.load(f)
 
@@ -96,10 +93,7 @@ def load_model():
 
     model = StoneEmbedder(num_classes)
 
-    ckpt_path = Path(
-        "/home/Unthinkable/Downloads/stonex-preprocessing"
-        "/309refinedaugmodel/best_stone_model.pt"
-    )
+    ckpt_path =Path("309refinedaugmodel/best_stone_model.pt")
     ckpt = torch.load(ckpt_path, map_location=DEVICE, weights_only=False)
     model.load_state_dict(ckpt["model"])
 
